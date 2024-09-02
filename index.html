@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="C:\Users\viney\OneDrive\Documents\app development\vijay\style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\Sign up.gif" alt="Animated Image" class="animated-image">
+        </div>
+        <div class="right-side">
+            <div class="form-wrapper">
+                <h2>User Registration</h2>
+                <form id="registrationForm" action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <label for="fullName">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 6.jpg" alt="User Icon" class="icon"> Full Name:
+                        </label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required pattern="[A-Za-z\s]+" title="Name must start with an alphabet and contain only letters and spaces.">
+                        <small class="error-message" id="nameError">Name must contain only letters and spaces.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 3.jpg" alt="Email Icon" class="icon"> Email:
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <small class="error-message" id="emailError">Please enter a valid email address.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 1.jpg" alt="Phone Icon" class="icon"> Phone Number:
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number must be exactly 10 digits.">
+                        <small class="error-message" id="phoneError">Phone number must be 10 digits.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateOfBirth">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 5.jpg" alt="Calendar Icon" class="icon"> Date of Birth:
+                        </label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newsletterPreference">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 2.jpg" alt="Newsletter Icon" class="icon"> Receive Newsletter:
+                        </label>
+                        <div>
+                            <input type="radio" id="yesNewsletter" name="newsletter" value="yes" required>
+                            <label for="yesNewsletter">Yes</label>
+                            <input type="radio" id="noNewsletter" name="newsletter" value="no" required>
+                            <label for="noNewsletter">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 4.jpg" alt="Password Icon" class="icon"> Password:
+                        </label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8" title="Password must be at least 8 characters long.">
+                        <small class="error-message" id="passwordError">Password must be at least 8 characters long.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            <img src="C:\Users\viney\OneDrive\Documents\app development\vijay\image 4.jpg" alt="Confirm Password Icon" class="icon"> Confirm Password:
+                        </label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required minlength="8" title="Password must be at least 8 characters long.">
+                        <small class="error-message" id="confirmPasswordError">Passwords do not match.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-animation" class="hidden">
+        <img src="C:\College\Classroom\5-SEMESTER\APP DEVELOPMENT\EXP - 2\Registration Form\Check.gif" alt="Registration Completed" class="success-vector">
+        <p>Registration Completed Successfully!</p>
+    </div>
+
+    <script src="C:\Users\viney\OneDrive\Documents\app development\vijay\script.js"></script>
+</body>
+</html>
